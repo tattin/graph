@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(function(){
+    var init = (function(){
+        center = $("#container").width() / 2;
+        middle = $("#container").height() / 2;
+        
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.fillStyle = "rgb(192, 80, 77)";
+        ctx.arc(center, middle, 0, 100, true);
+        ctx.fill();
+    });
+    init();
+});
+</script>
+<style>
+#container,
+#canvs {
+    height: 200px;
+    width: 180px;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <canvas id="canvas" width="180" height="200"></canvas>
+    </div>
+</body>
+</html>
